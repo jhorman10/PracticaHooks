@@ -4,7 +4,6 @@ export const Message = () => {
   const [coords, setCoords] = useState({ x: 0, y: 0 });
   useEffect(() => {
     const onMouseMove = ({ x, y }) => {
-      //const coords = { x, y };
       setCoords({ x, y });
     };
 
@@ -17,8 +16,9 @@ export const Message = () => {
 
   return (
     <>
-      <h3>Usuario ya exite</h3>
-      {JSON.stringify(coords)}
+      <small className="fst-italic text-danger">El usuario ya exite</small>
+      <br />
+      <code>Coords Mouse{JSON.stringify(coords)}</code>
     </>
   );
 };

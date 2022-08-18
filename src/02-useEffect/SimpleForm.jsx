@@ -18,24 +18,16 @@ export const SimpleForm = () => {
   };
 
   useEffect(() => {
-    // console.log('useEffect called!');
+    console.log('useEffect called!');
   }, []);
 
   useEffect(() => {
-    // console.log('formState change!');
+    console.log('formState change!');
   }, [formState]);
 
   useEffect(() => {
-    // console.log('email change!');
+    console.log('email change!');
   }, [email]);
-
-  //   useEffect(() => {
-  //     first
-
-  //     return () => {
-  //       second
-  //     }
-  //   }, [third])
 
   return (
     <>
@@ -49,6 +41,7 @@ export const SimpleForm = () => {
         value={username}
         onChange={onInputChange}
       />
+      {username === 'Jhorman2' && <Message />}
       <input
         type="email"
         className="form-control mt-2"
@@ -57,8 +50,6 @@ export const SimpleForm = () => {
         value={email}
         onChange={onInputChange}
       />
-
-      {username === 'Jhorman2' && <Message />}
     </>
   );
 };

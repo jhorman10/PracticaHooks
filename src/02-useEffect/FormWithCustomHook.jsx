@@ -1,12 +1,20 @@
 import { useForm } from '../hooks/useForm';
 
 export const FormWithCustomHook = () => {
-  const { username, email, password, formState, onInputChange, onResetForm } =
-    useForm({
-      username: '',
-      email: '',
-      password: '',
-    });
+  const {
+    username,
+    email,
+    password,
+    edad,
+    formState,
+    onInputChange,
+    onResetForm,
+  } = useForm({
+    username: '',
+    email: '',
+    password: '',
+    edad: '',
+  });
 
   return (
     <>

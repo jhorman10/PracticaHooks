@@ -1,5 +1,6 @@
 import { useTodos } from '../hooks/useTodos';
 import { TodoAdd, TodoList } from './';
+import { Badges } from './Badges';
 
 export const TodoApp = () => {
   const {
@@ -14,14 +15,7 @@ export const TodoApp = () => {
   return (
     <>
       <h1>TodoApp</h1>
-      <small className="badge rounded-pill text-bg-success">
-        Realizados: {done}
-      </small>
-      {pending > 0 && (
-        <small className="badge rounded-pill text-bg-warning">
-          Pendientes: {pending}
-        </small>
-      )}
+      <Badges done={done} pending={pending} />
       <hr />
       <div className="row">
         <div className="col-6">
